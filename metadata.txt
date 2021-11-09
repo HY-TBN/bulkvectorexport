@@ -7,28 +7,28 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=bulkvectorexport
+name=bulkvectorexport-tbn
 qgisMinimumVersion=3.0
-description=export vector layers to common format and crs
-version=1.0
-author=Zoltan Siki
+description=export vector layers to common format and crs (fork to set recommended GeoJSON RFC7946 configuration options)
+version=1.1
+author=Zoltan Siki, HY-TBN
 email=siki1958@gmail.com
 
-about=Export opened vector layers from the project to a common folder, format and CRS.
+about=Export opened vector layers from the project to a common folder, format and CRS (fork to set recommended GeoJSON RFC7946 configuration options).
 
-tracker=https://github.com/zsiki/bulkvectorexport/issues
-repository=https://github.com/zsiki/bulkvectorexport
+tracker=https://github.com/HY-TBN/bulkvectorexport/issues
+repository=https://github.com/HY-TBN/bulkvectorexport
 # End of mandatory metadata
 
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-# changelog=
+changelog="11/9/21 HY fork to set recommended GeoJSON RFC7946 configuration options"
 
 # Tags are comma separated with spaces allowed
-tags=export vector crs
+tags=export vector crs geojson
 
-homepage=https://github.com/zsiki/bulkvectorexport
+homepage=https://github.com/HY-TBN/bulkvectorexport
 category=Vector
 icon=icon.png
 # experimental flag
