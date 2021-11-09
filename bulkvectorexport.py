@@ -200,11 +200,16 @@ class BulkVectorExport:
                     if self.dlg.layerCrsButton.isChecked():
                         crs = layer.crs()
                         print('CRS selected: ', crs.description())
+                    # 11/9/21 HY forked to set recommended GeoJSON RFC7946 configuration options
+                    if ogr_driver_name == "GeoJSON":
+                        ogr_lco = ["RFC7946=YES", "COORDINATE_PRECISION=6"]
+                    else:
+                        ogr_lco = []
                     # Thijs Brentjens (https://github.com/thijsbrentjens/)
                     # add option for exporting only selected features
                     result2 = QgsVectorFileWriter.writeAsVectorFormat(layer,
                         layer_filename, layer.dataProvider().encoding(), crs,
-                        ogr_driver_name, exportOnlySelected)
+                        ogr_driver_name, exportOnlySelected, layerOptions=ogr_lco)
                     if result2[0]:
                         QMessageBox.warning(self.dlg, "BulkVectorExport",\
                             "Failed to export: " + layer.name() + \
