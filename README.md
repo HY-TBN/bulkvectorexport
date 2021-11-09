@@ -1,6 +1,8 @@
 bulkvectorexport
 ================
 
+* 11/9/21 HY forked to set recommended GeoJSON RFC7946 configuration options
+
 QGIS plugin to export vector layers to selected format/crs and
 style file (SLD or QLR).
  
